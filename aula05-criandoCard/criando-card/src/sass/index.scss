@@ -1,0 +1,59 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.card {
+  margin: 50px;
+  height: 300px;
+  background-color: rgb(211, 222, 233);
+  border-radius: 6px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 30px;
+}
+
+.capa {
+  width: 180px;
+  border: 5px solid black;
+}
+
+.poster-description {
+  height: 86%;
+}
+
+.title {
+  font-size: 1.6em;
+}
+
+.description {
+  font-size: 0.9em;
+  margin-top: 20px;
+}
+
+.buybutton {
+  height: 40px;
+  width: 120px;
+  background-color: black;
+  color: white;
+  margin-top: 30px;
+  border: none;
+  border-radius: 6px;
+
+  &:hover {
+    background-color: rgb(61, 61, 61);
+    transition: 0.2s;
+  }
+}
