@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: rgb(207, 207, 207);
+  font-family: sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#root {
+  width: 350px;
+  height: 520px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.281);
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.photo {
+  margin-top: 30px;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.fullname {
+  background-color: #fff;
+
+  font-size: 1.8em;
+  padding: 14px 0;
+  border-bottom: 1px solid rgb(98, 152, 177);
+}
+
+.text {
+  background-color: #fff;
+  padding: 15px 0;
+  border-bottom: 1px solid rgb(98, 152, 177);
+}
+
+.social {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  padding-top: 15px;
+  justify-content: center;
+}
+
+.social a {
+  min-width: 130px;
+  padding: 10px 30px;
+  background-image: linear-gradient(25deg, rgb(21, 126, 196), rgb(183, 234, 255));
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.37);
+  text-decoration: none;
+  color: black;
+  font-size: 0.9em;
+}
+
+.social a:hover {
+  background-image: linear-gradient(25deg, rgb(41, 150, 177), rgb(183, 234, 255));
+  box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.582);
+  transition: 0.3s;
+}

@@ -1,3 +1,4 @@
-export default function Title() {
-  return <h1 className="title">Pôster: Star Wars (1977)</h1>;
+// eslint-disable-next-line react/prop-types
+export default function Title({ title }) {
+  return <h1 className="title">{title}</h1>;
 }

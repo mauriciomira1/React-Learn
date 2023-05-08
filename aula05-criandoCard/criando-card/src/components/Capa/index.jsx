@@ -1,5 +1,4 @@
-import ImgCapa from "../../assets/star-wars.jpg";
-
-export default function Capa() {
-  return <img className="capa" src={ImgCapa} alt="Imagem Star Wars" />;
+// eslint-disable-next-line react/prop-types
+export default function Capa({ posterImg }) {
+  return <img className="capa" src={posterImg} alt="Poster" />;
 }
