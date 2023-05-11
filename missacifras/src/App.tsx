@@ -1,4 +1,4 @@
-import Menu from "./components/generic/Menu";
+import Menu from "./components/generic/menu";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import logo from "./assets/logo/logo(305x91).png";
