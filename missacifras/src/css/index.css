@@ -8,4 +8,41 @@
   width: 30px;
 }
 
+#searchArea {
+  border: none;
+  border-radius: 30px;
+  padding: 5px 10px;
+  background-color: #fff;
+  height: 35px;
+  box-shadow: 0px 2px 18px -10px rgba(0, 0, 0, 0.411);
+  display: flex;
+  align-items: center;
+  width: 30%;
+  max-width: 400px;
+  justify-content: space-between;
+}
+#searchArea input {
+  font-size: 0.8em;
+  width: 92%;
+  border: none;
+}
+#searchArea input:focus {
+  outline: none;
+}
+#searchArea button {
+  width: 30px;
+  border: none;
+  background-color: transparent;
+  padding-bottom: 4px;
+  margin-right: -5px;
+}
+#searchArea button:hover img {
+  opacity: 0.5;
+}
+#searchArea button img {
+  width: 20px;
+  opacity: 1;
+  transition: 0.15s;
+}
+
 /*# sourceMappingURL=index.css.map */
