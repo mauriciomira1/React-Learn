@@ -1,6 +1,4 @@
 import Menu from "./components/generic/Menu";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import logo from "./assets/logo/logo(305x91).png";
 import userLogo from "./assets/generic/userLogo.png";
 import searchLogo from "./assets/generic/lupa.png";
