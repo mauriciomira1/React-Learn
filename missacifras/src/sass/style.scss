@@ -1,0 +1,14 @@
+// Paleta de cores
+@import "./colors/colors.scss";
+
+// Fontes do site
+@import "./fonts/fonts.scss";
+
+// CSS do Menu principal
+@import "./generic/menu.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: $font-bold;
+}

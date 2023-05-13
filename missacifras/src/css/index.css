@@ -1,3 +1,28 @@
+@font-face {
+  font-family: "Boldfinger";
+  src: url("../../assets/fonts/Boldfinger.ttf");
+}
+@font-face {
+  font-family: "Quicksand-Light";
+  src: url("../../assets/fonts/quicksand/static/Quicksand-Light.ttf");
+  /*   font-weight: 100 700; */
+}
+@font-face {
+  font-family: "Quicksand-Regular";
+  src: url("../../assets/fonts/quicksand/static/Quicksand-Regular.ttf");
+}
+@font-face {
+  font-family: "Quicksand-Medium";
+  src: url("../../assets/fonts/quicksand/static/Quicksand-Medium.ttf");
+}
+@font-face {
+  font-family: "Quicksand-SemiBold";
+  src: url("../../assets/fonts/quicksand/static/Quicksand-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Quicksand-Bold";
+  src: url("../../assets/fonts/quicksand/static/Quicksand-Bold.ttf");
+}
 #logo {
   width: 120px;
 }
@@ -43,6 +68,23 @@
   width: 20px;
   opacity: 1;
   transition: 0.15s;
+}
+
+#navBar li {
+  list-style: none;
+}
+#navBar li a {
+  text-decoration: none;
+}
+#navBar li a img {
+  width: 15px;
+  margin-right: 4px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Quicksand-Bold", sans-serif;
 }
 
 /*# sourceMappingURL=index.css.map */

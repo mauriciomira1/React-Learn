@@ -1,12 +1,12 @@
 import acordesImg from "../../../assets/generic/acordes.svg";
 import faleConoscoImg from "../../../assets/generic/fale-conosco.svg";
-import colaboreImg from "../../../assets/generic/fale-conosco.svg";
+import colaboreImg from "../../../assets/generic/colabore.svg";
 import userImg from "../../../assets/generic/userLogo.png";
 
 export default function Navbar() {
   return (
     <>
-      <nav>
+      <nav id="navBar">
         <ul>
           <li>
             <a href="#">

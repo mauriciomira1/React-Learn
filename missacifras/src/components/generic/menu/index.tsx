@@ -1,6 +1,6 @@
 import Navbar from "./navbar";
 
-export default function Menu(props: any) {
+export default function Menu(props) {
   return (
     <>
       <nav id="navBar">
