@@ -3,16 +3,21 @@ import Navbar from "./navbar";
 export default function Menu(props) {
   return (
     <>
-      <nav id="navBar">
+      <nav id="menu">
         <img id="logo" src={props.logo} alt="Logotipo" />
         <form id="searchArea" action="" name="search" autoComplete="off">
-          <input type="text" name="" id="" />
-          <button type="submit">
+          <input
+            type="text"
+            name="textSearch"
+            id="textSearch"
+            placeholder="Qual música vai louvar hoje?"
+          />
+          <button type="submit" id="searchBtn">
             <img src={props.searchLogo} id="searchLogo" alt="Logotipo" />
           </button>
         </form>
+        <Navbar />
       </nav>
-      <Navbar />
     </>
   );
 }

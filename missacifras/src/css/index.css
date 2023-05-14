@@ -24,59 +24,79 @@
   src: url("../../assets/fonts/quicksand/static/Quicksand-Bold.ttf");
 }
 #logo {
-  width: 120px;
+  margin-left: 1%;
+  width: 140px;
 }
 
-#userLogo {
+#userBtn {
   border: none;
   border-radius: 50%;
   width: 30px;
 }
 
-#searchArea {
-  border: none;
-  border-radius: 30px;
+#menu {
+  width: 100vw;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 10px 10px -10px rgba(0, 0, 0, 0.226);
+}
+#menu #searchArea {
+  border: 1px solid rgba(0, 0, 0, 0.178);
+  border-radius: 8px;
   padding: 5px 10px;
-  background-color: #fff;
   height: 35px;
-  box-shadow: 0px 2px 18px -10px rgba(0, 0, 0, 0.411);
   display: flex;
   align-items: center;
-  width: 30%;
-  max-width: 400px;
+  width: 40%;
+  max-width: 500px;
   justify-content: space-between;
 }
-#searchArea input {
-  font-size: 0.8em;
-  width: 92%;
-  border: none;
+#menu #searchArea:focus {
+  border: 2px solid rgba(0, 0, 0, 0.555);
 }
-#searchArea input:focus {
+#menu #searchArea #textSearch {
+  font-size: 0.8em;
+  width: 100%;
+  border: none;
+  height: 30px;
+  margin-left: -6px;
+}
+#menu #searchArea #textSearch:focus {
   outline: none;
 }
-#searchArea button {
+#menu #searchArea #searchBtn {
   width: 30px;
   border: none;
   background-color: transparent;
-  padding-bottom: 4px;
-  margin-right: -5px;
+  padding-top: 4px;
+  margin-right: -6px;
 }
-#searchArea button:hover img {
+#menu #searchArea #searchBtn:hover img {
   opacity: 0.5;
 }
-#searchArea button img {
+#menu #searchArea #searchBtn img {
   width: 20px;
   opacity: 1;
   transition: 0.15s;
 }
 
-#navBar li {
+#navBar ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#navBar ul li {
+  padding: 0 10px;
   list-style: none;
 }
-#navBar li a {
+#navBar ul li a {
+  font-family: "Quicksand-Semibold", sans-serif;
   text-decoration: none;
 }
-#navBar li a img {
+#navBar ul li a img {
   width: 15px;
   margin-right: 4px;
 }
@@ -84,7 +104,7 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "Quicksand-Bold", sans-serif;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=index.css.map */
