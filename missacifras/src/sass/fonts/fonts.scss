@@ -2,31 +2,8 @@
   font-family: "Boldfinger";
   src: url("../../assets/fonts/Boldfinger.ttf");
 }
-@font-face {
-  font-family: "Quicksand-Light";
-  src: url("../../assets/fonts/quicksand/static/Quicksand-Light.ttf");
-/*   font-weight: 100 700; */
-}
-@font-face {
-  font-family: "Quicksand-Regular";
-  src: url("../../assets/fonts/quicksand/static/Quicksand-Regular.ttf");
-}
-@font-face {
-  font-family: "Quicksand-Medium";
-  src: url("../../assets/fonts/quicksand/static/Quicksand-Medium.ttf");
-}
-@font-face {
-  font-family: "Quicksand-SemiBold";
-  src: url("../../assets/fonts/quicksand/static/Quicksand-SemiBold.ttf");
-}
-@font-face {
-  font-family: "Quicksand-Bold";
-  src: url("../../assets/fonts/quicksand/static/Quicksand-Bold.ttf");
-}
 
-$font-big-bolder: 'Boldfinger', sans-serif;
-$font-light: 'Quicksand-Light', sans-serif;
-$font-regular: 'Quicksand-Regular', sans-serif;
-$font-medium: 'Quicksand-Medium', sans-serif;
-$font-semibold: 'Quicksand-Semibold', sans-serif;
-$font-bold: 'Quicksand-Bold', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+

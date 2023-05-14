@@ -1,4 +1,9 @@
-
+@mixin text-font ($family, $weight, $color, $size) {
+  font-family: $family;
+  font-weight: $weight;
+  color: $color;
+  font-size: $size;
+}
 
 #logo {
   margin-left: 1%;
@@ -76,11 +81,20 @@
       padding: 0 10px;
       list-style: none;
       a {
-        font-family: $font-semibold;
+
+        @include text-font('Quicksand', 600, $cor-laranja, 0.9em);
         text-decoration: none;
-        img {
-            width: 15px;
-            margin-right: 4px;
+
+        &:hover {
+          color: $cor-azul;
+        }
+
+        &:active {
+          color: gray;
+        }
+        #user {
+            width: 25px;
+            margin-right: 10px;
         }
       }
     }

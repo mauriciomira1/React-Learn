@@ -9,26 +9,17 @@ export default function Navbar() {
       <nav id="navBar">
         <ul>
           <li>
-            <a href="#">
-              <img src={acordesImg} alt="Acordes" />
-              ACORDES
-            </a>
+            <a href="#">ACORDES</a>
+          </li>
+          <li>
+            <a href="#">FALE CONOSCO</a>
+          </li>
+          <li>
+            <a href="#">COLABORE</a>
           </li>
           <li>
             <a href="#">
-              <img src={faleConoscoImg} alt="Fale conosco" />
-              FALE CONOSCO
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src={colaboreImg} alt="Colabore" />
-              COLABORE
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <img src={userImg} alt="Usuário" />
+              <img src={userImg} alt="Usuário" id="user" />
             </a>
           </li>
         </ul>

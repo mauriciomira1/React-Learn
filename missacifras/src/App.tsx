@@ -6,8 +6,3 @@ import searchLogo from "./assets/generic/lupa.png";
 export default function App() {
   return <Menu logo={logo} userLogo={userLogo} searchLogo={searchLogo}></Menu>;
 }
-
-{
-  /* <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
-<script src="./node_modules/bootstrap/dist/js/bootstrap.js" defer></script> */
-}
