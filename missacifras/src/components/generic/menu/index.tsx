@@ -1,26 +1,29 @@
-import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import Offcanvas from "react-bootstrap/Offcanvas";
+import Navbar from "./navbar";
 
-/* export default function Menu(props: any) {
+export default function Menu(props) {
   return (
     <>
-      <div id="logo">
-        <img src={props.logo} alt="Logotipo" />
-      </div>
-      <NavMenu />
+      <nav id="menu">
+        <img id="logo" src={props.logo} alt="Logotipo" />
+        <form id="searchArea" action="" name="search" autoComplete="off">
+          <input
+            type="text"
+            name="textSearch"
+            id="textSearch"
+            placeholder="Qual música vai louvar hoje?"
+          />
+          <button type="submit" id="searchBtn">
+            <img src={props.searchLogo} id="searchLogo" alt="Logotipo" />
+          </button>
+        </form>
+        <Navbar />
+      </nav>
     </>
   );
-} */
+}
 
-export default function Menu(props: any) {
-  return (
-    <>
-      {["lg"].map((expand) => (
+<>
+  {/*       {["lg"].map((expand) => (
         <Navbar key={expand} bg="light" expand={expand} className="mb-3">
           <Container fluid>
             <Navbar.Brand href="#">
@@ -38,15 +41,21 @@ export default function Menu(props: any) {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Form className="d-flex">
-                  <Form.Control
-                    type="search"
-                    placeholder="Search"
-                    className="me-2"
-                    aria-label="Search"
-                  />
-                  <Button variant="outline-success">Search</Button>
-                </Form>
+                <form
+                  id="searchArea"
+                  action=""
+                  name="search"
+                  autoComplete="off"
+                >
+                  <input type="text" name="" id="" />
+                  <button type="submit">
+                    <img
+                      src={props.searchLogo}
+                      id="searchLogo"
+                      alt="Logotipo"
+                    />
+                  </button>
+                </form>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link href="#action1">Acordes</Nav.Link>
                   <Nav.Link href="#action1">Afinador</Nav.Link>
@@ -70,7 +79,5 @@ export default function Menu(props: any) {
             </Navbar.Offcanvas>
           </Container>
         </Navbar>
-      ))}
-    </>
-  );
-}
+      ))} */}
+</>;

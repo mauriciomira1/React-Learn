@@ -1,35 +1,29 @@
-/* import Nav from "react-bootstrap/Nav";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import acordesImg from "../../../assets/generic/acordes.svg";
+import faleConoscoImg from "../../../assets/generic/fale-conosco.svg";
+import colaboreImg from "../../../assets/generic/colabore.svg";
+import userImg from "../../../assets/generic/userLogo.png";
 
-function NavMenu() {
-  const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
-
+export default function Navbar() {
   return (
-    <Nav variant="pills" activeKey="1" onSelect={handleSelect}>
-      <Nav.Item>
-        <Nav.Link eventKey="1" href="#">
-          ACORDES
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="2" title="Item" href="#">
-          AFINADOR
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="3" href="#">
-          FALE CONOSCO
-        </Nav.Link>
-      </Nav.Item>
-      <NavDropdown title="Dropdown" id="nav-dropdown">
-        <NavDropdown.Item eventKey="4.1">MINHA CONTA</NavDropdown.Item>
-        <NavDropdown.Item eventKey="4.2">TROCAR SENHA</NavDropdown.Item>
-        <NavDropdown.Item eventKey="4.3">PROBLEMAS</NavDropdown.Item>
-        <NavDropdown.Divider />
-        <NavDropdown.Item eventKey="4.4">CONFIGURAÇÕES</NavDropdown.Item>
-      </NavDropdown>
-    </Nav>
+    <>
+      <nav id="navBar">
+        <ul>
+          <li>
+            <a href="#">ACORDES</a>
+          </li>
+          <li>
+            <a href="#">FALE CONOSCO</a>
+          </li>
+          <li>
+            <a href="#">COLABORE</a>
+          </li>
+          <li>
+            <a href="#">
+              <img src={userImg} alt="Usuário" id="user" />
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 }
-
-export default NavMenu; */
