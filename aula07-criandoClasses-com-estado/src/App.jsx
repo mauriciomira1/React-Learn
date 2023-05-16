@@ -1,6 +1,5 @@
-/* import { useState } from "react"; */
 import "./App.css";
-import Planets from "./components/planets/planet";
+import Planets from "./components/planets";
 
 function App() {
   /*   const [count, setCount] = useState(0); */
