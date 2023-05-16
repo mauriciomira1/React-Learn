@@ -4,16 +4,16 @@ function clickOnPlanet(name) {
   console.log(`Clicou no planeta ${name}`);
 }
 
-function verifyColor() {
+/* function verifyColor() {
   if (colorImg === ".gray-img") colorImg = ".color-img";
   else colorImg = ".gray-img";
-}
+} */
 
 export default function Planets() {
   return (
     <>
       <h3>Planet list</h3>
-      <button onClick={verifyColor}>P&B</button>
+      {/*       <button onClick={verifyColor}>P&B</button> */}
       <Planet
         planetName="Mercúrio"
         img_url="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mercury_in_color_-_Prockter07-edit1.jpg/420px-Mercury_in_color_-_Prockter07-edit1.jpg"

@@ -3,6 +3,10 @@ import GrayImg from "../../shared/gray_img";
 import DescriptionWithLink from "../../shared/descriptionWithLink";
 
 export default function Planet(props) {
+  const names = ["satA", "satB", "satC", "satD"];
+  const satellites = names.map((n) => {
+    <li>Satélite {n}</li>;
+  });
   let title;
   if (props.titleWithUnderline)
     title = (
@@ -17,6 +21,9 @@ export default function Planet(props) {
       {title}
       <DescriptionWithLink description={props.description} link={props.link} />
       <br />
+      <h4>Satélites</h4>
+      <ul>{satellites}</ul>
+      <hr />
       <GrayImg
         colorImg={props.colorImg}
         img_url={props.img_url}
@@ -34,4 +41,5 @@ Planet.propTypes = {
   link: PropTypes.string.isRequired,
   clickOnPlanet: PropTypes.func.isRequired,
   colorImg: PropTypes.string.isRequired,
+  titleWithUnderline: PropTypes.string.isRequired,
 };

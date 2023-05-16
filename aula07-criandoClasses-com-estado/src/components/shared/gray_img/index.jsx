@@ -5,7 +5,7 @@ export default function GrayImg(props) {
   return (
     <>
       <img
-        className={props.colorImg}
+        className="color-img"
         src={props.img_url}
         alt={props.planetName}
         onClick={props.clickOnPlanet}
