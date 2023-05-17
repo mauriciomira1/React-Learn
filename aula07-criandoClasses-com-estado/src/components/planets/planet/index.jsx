@@ -5,7 +5,8 @@ import DescriptionWithLink from "../../shared/descriptionWithLink";
 export default function Planet(props) {
   const names = ["satA", "satB", "satC", "satD"];
   const satellites = names.map((n) => {
-    <li>Satélite {n}</li>;
+    // eslint-disable-next-line react/jsx-key
+    return <li>Satélite {n}</li>;
   });
   let title;
   if (props.titleWithUnderline)
