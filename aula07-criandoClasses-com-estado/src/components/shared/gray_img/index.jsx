@@ -4,12 +4,7 @@ import "./style.css";
 export default function GrayImg(props) {
   return (
     <>
-      <img
-        className="color-img"
-        src={props.img_url}
-        alt={props.planetName}
-        onClick={props.clickOnPlanet}
-      />
+      <img className="color-img" src={props.img_url} alt={props.planetName} />
     </>
   );
 }
@@ -17,6 +12,4 @@ export default function GrayImg(props) {
 GrayImg.propTypes = {
   img_url: PropTypes.string.isRequired,
   planetName: PropTypes.string.isRequired,
-  clickOnPlanet: PropTypes.func.isRequired,
-  colorImg: PropTypes.string.isRequired,
 };

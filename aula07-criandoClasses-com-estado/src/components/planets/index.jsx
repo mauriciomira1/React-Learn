@@ -1,5 +1,5 @@
-import React from "react";
 import Planet from "./planet/";
+import { useState, useEffect } from "react";
 
 /* function clickOnPlanet(name) {
   console.log(`Clicou no planeta ${name}`);
@@ -15,57 +15,47 @@ async function getPlanets() {
   let data = await response.json();
   return data;
 }
-class Planets extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      planets: [],
-    };
-  }
 
-  componentDidMount() {
+const Planets = () => {
+  const [planets, setPlanets] = useState([]);
+
+  useEffect(() => {
     getPlanets().then((data) => {
-      this.setState(() => ({
-        planets: data["planets"],
-      }));
+      setPlanets(data["planets"]);
     });
-  }
+  }, []); // como está vazio, ele só renderiza uma vez. Se quisesse que renderizasse quando o 'planets' atualizasse, inseriria esse nome
 
-  removeLast = () => {
-    let new_planets = [...this.state.planets];
+  const RemoveLast = () => {
+    let new_planets = [...planets];
     new_planets.pop();
-    this.setState(() => ({
-      planets: new_planets,
-    }));
+    setPlanets(new_planets);
   };
 
-  duplicateLastPlanet = () => {
-    let lastPlanet = this.state.planets[this.state.planets.length - 1];
-    this.setState(() => ({
-      planets: [...this.state.planets, lastPlanet],
-    }));
+  const DuplicateLastPlanet = () => {
+    let lastPlanet = planets[planets.length - 1];
+    setPlanets([...planets, lastPlanet]);
   };
 
-  render() {
-    return (
-      <>
-        <h3>Planet list</h3>
-        <button onClick={this.removeLast}>Remove last</button>
-        <br />
-        <button onClick={this.duplicateLastPlanet}>Duplicate last</button>
-        {this.state.planets.map((planet) => {
-          return (
-            <Planet
-              key={planet.planetName}
-              planetName={planet.name}
-              img_url={planet.img_url}
-              description={planet.description}
-              link={planet.link}
-            />
-          );
-        })}
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <h3>Planet list</h3>
+      <button onClick={RemoveLast}>Remove last</button>
+      <br />
+      <button onClick={DuplicateLastPlanet}>Duplicate last</button>
+      {planets.map((planet, index) => {
+        return (
+          <Planet
+            id={planet.id}
+            key={index}
+            planetName={planet.name}
+            img_url={planet.img_url}
+            description={planet.description}
+            link={planet.link}
+          />
+        );
+      })}
+    </>
+  );
+};
+
 export default Planets;

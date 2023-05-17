@@ -1,10 +1,10 @@
-/* import PropTypes from "prop-types"; */
+import PropTypes from "prop-types";
 import GrayImg from "../../shared/gray_img";
 import DescriptionWithLink from "../../shared/descriptionWithLink";
 import React from "react";
 
-async function getSatellites(planetName) {
-  let response = await fetch(`http://localhost:5173/public/${planetName}.json`);
+async function getSatellites(id) {
+  let response = await fetch(`http://localhost:5173/public/${id}.json`);
   let data = await response.json();
   return data;
 }
@@ -16,8 +16,8 @@ class Planet extends React.Component {
     };
   }
 
-  satellitesDidMount(planetName) {
-    getSatellites(planetName).then((data) => {
+  componentDidMount() {
+    getSatellites(this.props.id).then((data) => {
       this.setState(() => ({
         satellites: data["satellites"],
       }));
@@ -25,48 +25,46 @@ class Planet extends React.Component {
   }
 
   render() {
-    const satellites = this.state.satellites.map((satellite) => {
-      // eslint-disable-next-line react/jsx-key
-      return <li>{satellite}</li>;
-    });
-    let title;
-    if (props.titleWithUnderline)
+    /*     let title;
+    if (this.props.titleWithUnderline)
       title = (
         <h4>
-          <u>{props.planetName}</u>
+          <u>{this.props.planetName}</u>
         </h4>
       );
-    else title = <h4>{props.planetName}</h4>;
+    else title = <h4>{this.props.planetName}</h4>; */
 
     return (
       <>
-        {title}
+        <h4>{this.props.planetName}</h4>
         <DescriptionWithLink
-          description={props.description}
-          link={props.link}
+          description={this.props.description}
+          link={this.props.link}
+        />
+        <br />
+        <GrayImg
+          img_url={this.props.img_url}
+          planetName={this.props.planetName}
         />
         <br />
         <h4>Satélites</h4>
-        <ul>{satellites}</ul>
+        <ul>
+          {this.state.satellites.map((satellite, index) => (
+            <li key={index}>{satellite.name}</li>
+          ))}
+        </ul>
         <hr />
-        <GrayImg
-          colorImg={props.colorImg}
-          img_url={props.img_url}
-          planetName={props.planetName}
-          clickOnPlanet={() => props.clickOnPlanet(props.planetName)}
-        />
       </>
     );
   }
 }
 export default Planet;
 
-/* Planet.propTypes = {
+Planet.propTypes = {
   planetName: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   img_url: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
-  clickOnPlanet: PropTypes.func.isRequired,
-  colorImg: PropTypes.string.isRequired,
-  titleWithUnderline: PropTypes.string.isRequired,
-}; */
+  /*   titleWithUnderline: PropTypes.bool.isRequired, */
+  id: PropTypes.string.isRequired,
+};
