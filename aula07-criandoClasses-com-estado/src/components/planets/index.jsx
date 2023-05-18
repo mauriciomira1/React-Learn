@@ -1,6 +1,6 @@
 import Planet from "./planet/";
 import { useState, useEffect } from "react";
-import Form from "./form";
+import Form from "./formPlanet";
 
 /* function clickOnPlanet(name) {
   console.log(`Clicou no planeta ${name}`);
@@ -25,8 +25,7 @@ const Planets = () => {
       setPlanets(data["planets"]);
     });
   }, []); // como está vazio, ele só renderiza uma vez. Se quisesse que renderizasse quando o 'planets' atualizasse, inseriria esse nome
-  let new_planet = "";
-  const addPlanet = () => {
+  const addPlanet = (new_planet) => {
     setPlanets([...planets, new_planet]);
   };
 

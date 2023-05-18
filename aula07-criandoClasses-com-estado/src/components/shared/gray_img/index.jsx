@@ -4,7 +4,7 @@ import "./style.css";
 export default function GrayImg(props) {
   return (
     <>
-      <img className="color-img" src={props.img_url} alt={props.planetName} />
+      <img className="color-img" src={props.img_url} alt="" />
     </>
   );
 }

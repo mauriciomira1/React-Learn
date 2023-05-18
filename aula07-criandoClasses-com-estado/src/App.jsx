@@ -1,14 +1,12 @@
 import "./App.css";
-import Planets from "./components/planets";
+import Routes from "./routes";
 
-function App() {
+export default function App() {
   /*   const [count, setCount] = useState(0); */
 
   return (
     <>
-      <Planets />
+      <Routes />
     </>
   );
 }
-
-export default App;

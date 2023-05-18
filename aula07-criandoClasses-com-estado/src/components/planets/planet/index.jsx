@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
-import PropTypes from "prop-types";
+/* import PropTypes from "prop-types"; */
 import GrayImg from "../../shared/gray_img";
 import DescriptionWithLink from "../../shared/descriptionWithLink";
+/* import Form from "../formPlanet"; */
+import FormSatellite from "../formSatellite";
 
 async function getSatellites(id) {
   let response = await fetch(`http://localhost:5173/public/${id}.json`);
@@ -17,6 +19,10 @@ const Planet = (planet) => {
     });
   }, [planet.id]);
 
+  const addSatellite = (new_satellite) => {
+    setSatellites([...satellites, new_satellite]);
+  };
+
   return (
     <>
       <h4>{planet.planetName}</h4>
@@ -28,6 +34,7 @@ const Planet = (planet) => {
       <GrayImg img_url={planet.img_url} planetName={planet.planetName} />
       <br />
       <h4>Satélites</h4>
+      <FormSatellite addSatellite={addSatellite} />
       <ul>
         {satellites.map((satellite, index) => (
           <li key={index}>{satellite.name}</li>
@@ -40,10 +47,10 @@ const Planet = (planet) => {
 
 export default Planet;
 
-Planet.propTypes = {
+/* Planet.propTypes = {
   planetName: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   img_url: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-};
+}; */
