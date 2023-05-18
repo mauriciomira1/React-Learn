@@ -11,7 +11,7 @@ import Home from "./routes/Home.jsx";
 import Contact from "./routes/Contact.jsx";
 
 //2 - criar constante
-const router = createBrowserRouter([
+/* const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
@@ -19,6 +19,23 @@ const router = createBrowserRouter([
   {
     path: "contact",
     element: <Contact />,
+  },
+]); */
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+    ],
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
