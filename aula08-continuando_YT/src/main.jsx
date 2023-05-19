@@ -4,28 +4,25 @@ import App from "./App.jsx";
 import "./index.css";
 
 // 1 - configurando router
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
 
 //3 - criei, agora importo as páginas
 import Home from "./routes/Home.jsx";
 import Contact from "./routes/Contact.jsx";
+import ErrorPage from "./routes/ErrorPage.jsx";
+import ContactDetails from "./routes/ContactDetails";
 
 //2 - criar constante
-/* const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "contact",
-    element: <Contact />,
-  },
-]); */
-
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    // 4  - página de erro
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -34,6 +31,16 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />,
+      },
+      // 5 - nested routes (rotas aninhadas) - identificador único - dynamic routes
+      {
+        path: "/contact/:id",
+        element: <ContactDetails />,
+      },
+      // 7 - navigate para páginas não mais existentes
+      {
+        path: "oldcontact",
+        element: <Navigate to="/contact/" />,
       },
     ],
   },
