@@ -1,4 +1,4 @@
-import CardUser from "./components/User";
+import CardUser from "./components/CardUser";
 import UserPhoto01 from "./assets/user-01.jpg";
 import UserPhoto02 from "./assets/user-02.jpg";
 import UserPhoto03 from "./assets/user-03.jpg";

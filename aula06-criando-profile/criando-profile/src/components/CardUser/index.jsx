@@ -1,8 +1,21 @@
+import Title from "../Title";
+
 export default function CardUser(props) {
   return (
     <>
       <img className="photo" src={props.photoUser} alt="User" />
-      <h1 className="fullname">{props.userName}</h1>
+      <Title>
+        <span>{props.userName}</span>
+        <button>
+          <a
+            href="https://www.instagram.com/mauriciomira1/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Seguir
+          </a>
+        </button>
+      </Title>
       <p className="text">{props.hardSkills}</p>
 
       <p className="text">{props.phoneNumber}</p>
