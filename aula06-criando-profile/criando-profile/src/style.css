@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: rgb(207, 207, 207);
+
   font-family: sans-serif;
 }
 
@@ -12,6 +12,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgb(41, 41, 41);
 }
 
 #root {
@@ -32,11 +33,7 @@ body {
   object-fit: cover;
 }
 
-.text {
-  background-color: #fff;
-  padding: 15px 0;
-  border-bottom: 1px solid rgb(98, 152, 177);
-}
+
 
 .social {
   background-color: #fff;

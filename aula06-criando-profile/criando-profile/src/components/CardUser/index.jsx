@@ -1,11 +1,14 @@
+/* eslint-disable react/prop-types */
 import Title from "../Title";
+import CardSection from "./CardSection";
+import Social from "./Social";
 
 export default function CardUser(props) {
   return (
     <>
       <img className="photo" src={props.photoUser} alt="User" />
       <Title>
-        <span>{props.userName}</span>
+        <span>{props.name}</span>
         <button>
           <a
             href="https://www.instagram.com/mauriciomira1/"
@@ -16,22 +19,14 @@ export default function CardUser(props) {
           </a>
         </button>
       </Title>
-      <p className="text">{props.hardSkills}</p>
-
-      <p className="text">{props.phoneNumber}</p>
-
-      <p className="text">{props.email}</p>
+      <CardSection> {props.hardSkills}</CardSection>
+      <CardSection>{props.phoneNumber}</CardSection>
+      <CardSection>{props.email}</CardSection>
 
       <div className="social">
-        <a href={props.gitHub} target="_blank">
-          GitHub
-        </a>
-        <a href={props.linkedIn} target="_blank">
-          LinkedIn
-        </a>
-        <a href={props.instagram} target="_blank">
-          Instagram
-        </a>
+        <Social link={props.gitHub}>GitHub</Social>
+        <Social link={props.linkedIn}>LinkedIn</Social>
+        <Social link={props.instagram}>Instagram</Social>
       </div>
     </>
   );

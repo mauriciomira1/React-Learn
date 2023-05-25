@@ -1,6 +1,6 @@
 import CardUser from "./components/CardUser";
-import UserPhoto01 from "./assets/user-01.jpg";
-import UserPhoto02 from "./assets/user-02.jpg";
+/* import UserPhoto01 from "./assets/user-01.jpg";
+import UserPhoto02 from "./assets/user-02.jpg"; */
 import UserPhoto03 from "./assets/user-03.jpg";
 
 export default function App() {
@@ -14,8 +14,8 @@ export default function App() {
         email="abadiadasilva@email.com"
       /> */}
       <CardUser
-        photoUser={UserPhoto02}
-        userName="João Mineiro"
+        photoUser={UserPhoto03}
+        name="João Mineiro"
         hardSkills="Pedreiro, Marceneiro, Pintor"
         phoneNumber="+55(61)98524-9876"
         email="mineirojoao@email.com"
