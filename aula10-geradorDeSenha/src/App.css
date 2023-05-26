@@ -1,0 +1,15 @@
+#copyBtn,
+#generateBtn {
+  width: 120px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 2px;
+}
+
+#copiedBtn {
+  background-color: greenyellow;
+  color: black;
+  width: 120px;
+  height: 30px;
+  margin: 10px;
+}
