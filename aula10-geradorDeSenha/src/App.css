@@ -1,15 +1,19 @@
-#copyBtn,
-#generateBtn {
-  width: 120px;
+button,
+input {
   height: 30px;
   margin: 10px;
-  border-radius: 2px;
+  padding: 5px 20px;
+  background-color: rgb(56, 56, 56);
+  color: white;
+  margin-left: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 6px;
 }
+
 
 #copiedBtn {
   background-color: greenyellow;
+  border-radius: 6px;
   color: black;
-  width: 120px;
-  height: 30px;
-  margin: 10px;
 }
