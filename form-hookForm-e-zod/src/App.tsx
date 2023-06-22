@@ -10,11 +10,32 @@ import "./styles/global.css";
 */
 
 import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+const createUserFormSchema = z.object({
+  email: z
+    .string()
+    .nonempty("O e-mail é obrigatório")
+    .email("Formato de e-mail inválido"),
+  password: z
+    .string()
+    .min(6, "A senha deve ter pelo menos 6 caracteres")
+    .nonempty("A senha é obrigatória"),
+});
+
+type CreateUserFormData = z.infer<typeof createUserFormSchema>;
 
 function App() {
-  const { register, handleSubmit } = useForm();
-
   const [output, setOutput] = useState("");
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<CreateUserFormData>({
+    resolver: zodResolver(createUserFormSchema),
+  });
 
   function createUser(data: any) {
     setOutput(JSON.stringify(data, null, 2));
@@ -34,6 +55,11 @@ function App() {
               className="border border-zinc-200 shadow-sm rounded h-10 px-3"
               {...register("email")}
             />
+            {errors.email && (
+              <span className="text-red-600 text-sm">
+                {errors.email.message}
+              </span>
+            )}
           </div>
 
           <div className="flex flex-col gap-1">
@@ -43,6 +69,11 @@ function App() {
               className="border border-zinc-200 shadow-sm rounded h-10 px-3"
               {...register("password")}
             />
+            {errors.password && (
+              <span className="text-red-600 text-sm">
+                {errors.password.message}
+              </span>
+            )}
           </div>
 
           <button
