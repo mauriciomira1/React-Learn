@@ -15,7 +15,7 @@ const Trips = async () => {
 
   return (
     <div>
-      {data.map((item) => (
+      {data.map((item: [{}]) => (
         <p key={item.id}>Título: {item.title}</p>
       ))}
     </div>
