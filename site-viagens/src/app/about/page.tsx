@@ -1,11 +1,10 @@
-import React from "react";
 import Trips from "./components/Trips";
 
 export const metadata = {
   title: "About",
 };
 
-const Page = () => {
+const About = () => {
   return (
     <div>
       <Trips />
@@ -13,4 +12,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default About;

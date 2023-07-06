@@ -1,13 +1,23 @@
-"use client";
+import { prisma } from "@/lib/prisma";
 
-import React, { useState } from "react";
+const getTrips = async () => {
+  const trips = await prisma.trip.findMany({});
 
-const Trips = () => {
-  const [name, setName] = useState("");
+  return trips;
+};
+
+const Trips = async () => {
+  const data = await fetch("https://jsonplaceholder.typicode.com/posts", {
+    next: {
+      revalidate: 0,
+    },
+  }).then((res) => res.json());
 
   return (
     <div>
-      <h1>Trips</h1>
+      {data.map((item) => (
+        <p key={item.id}>Título: {item.title}</p>
+      ))}
     </div>
   );
 };
