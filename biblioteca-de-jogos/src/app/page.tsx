@@ -1,11 +1,12 @@
 "use client";
 
-import { ReactNode, useState } from "react";
+import Image from "next/image";
+import { useState } from "react";
 
 interface HomeProps {
   title: String;
   cover: String;
-  games: [{ id: Number; title: String; cover: String }];
+  games?: [{ id: Number; title: String; cover: String }];
 }
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
     setTitle("");
     setCover("");
   };
+  console.log(games);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -59,10 +61,11 @@ export default function Home() {
         </button>
       </form>
       <div>
-        {games.map<ReactNode>((game) => (
-          <div key={game.id}>
+        {games.map((game) => (
+          <div key={game.id} className="max-w-full">
             <h1>{game.title}</h1>
-            <h2>{game.cover}</h2>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={game.cover} alt={game.title} />
           </div>
         ))}
       </div>
